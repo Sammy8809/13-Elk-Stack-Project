@@ -26,8 +26,8 @@ Load balancing ensures that the application will be highly available, in additio
 -_Having a jumpbox allows us to make sure that only authorized users have access to the other webservers._ 
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file systems of the VMs and system metrics.
-- _Filebeat monitors the log files, collects log events, and forwards the information to Elasticsearch._ 
-- _Metricbeat collects metrics from the operating system and from services running on the server._ 
+- __Filebeat monitors the log files, collects log events, and forwards the information to Elasticsearch.__ 
+- __Metricbeat collects metrics from the operating system and from services running on the server.__ 
 
 The configuration details of each machine may be found below.
 
@@ -48,8 +48,8 @@ Only the Jump Box machine can accept connections from the Internet. Access to th
 - __173.21.141.4__
 
 Machines within the network can only be accessed by each other.
-- __Web 2, Web 3, Web 4 send traffic to the Elk Server_
-- __Jump Box can connect to the Elk Server_
+- __Web 2, Web 3, Web 4 send traffic to the Elk Server__
+- __Jump Box can connect to the Elk Server__
 	-IP: 13.90.227.236
 
 A summary of the access policies in place can be found in the table below.
@@ -64,41 +64,41 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- __Ansible allows us to automate commands and installation steps without having to do it one by one._ 
+- __Ansible allows us to automate commands and installation steps without having to do it one by one.__ 
 
 The playbook implements the following tasks:
-- __Installs docker.io_
-- __Installs python3_
-- __Installs the docker module_
-- __Increase the virtual memory of the virtual machine and allows the VM to use more memory_
-- __Download and lauch a docker elk container_
+- __Installs docker.io__
+- __Installs python3__
+- __Installs the docker module__
+- __Increase the virtual memory of the virtual machine and allows the VM to use more memory__
+- __Download and lauch a docker elk container__
 
 
 
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- __10.0.0.6_
-- __10.0.0.5_
-- __10.0.0.7_
+- __10.0.0.6__
+- __10.0.0.5__
+- __10.0.0.7__
 
 We have installed the following Beats on these machines:
-- __Filebeat_
-- __Metricbeat_
+- __Filebeat__
+- __Metricbeat__
 
 These Beats allow us to collect the following information from each machine:
-- __Filebeat: Detects changes to the filesystem. Will use to keep Apache logs, which will create logs of the activity and performance of the webserver_
-- __Metricbeat: Used to detect changes to the system metrics. i.e. SSH attempts and sudo esclations._ 
+- __Filebeat: Detects changes to the filesystem. Will use to keep Apache logs, which will create logs of the activity and performance of the webserver__
+- __Metricbeat: Used to detect changes to the system metrics. i.e. SSH attempts and sudo esclations.__ 
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- __Copy the playbook file to Ansible Control Node._
-- __Update the host file to include the VMs you want to run playbooks on._ 
-- __Run the playbook, and navigate to ____ to check that the installation worked as expected._
+- __Copy the playbook file to Ansible Control Node.__
+- __Update the host file to include the VMs you want to run playbooks on.__ 
+- __Run the playbook, and navigate to ____ to check that the installation worked as expected.__
 
 _TODO: Answer the following questions to fill in the blanks:_
-- __The playbook files are filebeat-playbook.yml, metricbeat-playbook.yml, and elk-install.yml_
-- __Update your config file and to change what machine the playbook runs on. In the yml file, change the "name" section to either webservers or elk_
-- __http://10.1.0.4:5601_
+- __The playbook files are filebeat-playbook.yml, metricbeat-playbook.yml, and elk-install.yml__
+- __Update your config file and to change what machine the playbook runs on. In the yml file, change the "name" section to either webservers or elk__
+- __http://10.1.0.4:5601__
