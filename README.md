@@ -45,11 +45,11 @@ The configuration details of each machine may be found below.
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _173.21.141.4_
+- __173.21.141.4__
 
 Machines within the network can only be accessed by each other.
-- _Web 2, Web 3, Web 4 send traffic to the Elk Server_
-- _Jump Box can connect to the Elk Server_
+- __Web 2, Web 3, Web 4 send traffic to the Elk Server_
+- __Jump Box can connect to the Elk Server_
 	-IP: 13.90.227.236
 
 A summary of the access policies in place can be found in the table below.
@@ -64,41 +64,41 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _Ansible allows us to automate commands and installation steps without having to do it one by one._ 
+- __Ansible allows us to automate commands and installation steps without having to do it one by one._ 
 
 The playbook implements the following tasks:
-- _Installs docker.io_
-- _Installs python3_
-- _Installs the docker module_
-- _Increase the virtual memory of the virtual machine and allows the VM to use more memory_
-- _Download and lauch a docker elk container_
+- __Installs docker.io_
+- __Installs python3_
+- __Installs the docker module_
+- __Increase the virtual memory of the virtual machine and allows the VM to use more memory_
+- __Download and lauch a docker elk container_
 
 
 
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _10.0.0.6_
-- _10.0.0.5_
-- _10.0.0.7_
+- __10.0.0.6_
+- __10.0.0.5_
+- __10.0.0.7_
 
 We have installed the following Beats on these machines:
-- _Filebeat_
-- _Metricbeat_
+- __Filebeat_
+- __Metricbeat_
 
 These Beats allow us to collect the following information from each machine:
-- _Filebeat: Detects changes to the filesystem. Will use to keep Apache logs, which will create logs of the activity and performance of the webserver_
-- _Metricbeat: Used to detect changes to the system metrics. i.e. SSH attempts and sudo esclations._ 
+- __Filebeat: Detects changes to the filesystem. Will use to keep Apache logs, which will create logs of the activity and performance of the webserver_
+- __Metricbeat: Used to detect changes to the system metrics. i.e. SSH attempts and sudo esclations._ 
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- _Copy the playbook file to Ansible Control Node._
-- _Update the host file to include the VMs you want to run playbooks on._ 
-- _Run the playbook, and navigate to ____ to check that the installation worked as expected._
+- __Copy the playbook file to Ansible Control Node._
+- __Update the host file to include the VMs you want to run playbooks on._ 
+- __Run the playbook, and navigate to ____ to check that the installation worked as expected._
 
 _TODO: Answer the following questions to fill in the blanks:_
-- _The playbook files are filebeat-playbook.yml, metricbeat-playbook.yml, and elk-install.yml_
-- _Update your config file and to change what machine the playbook runs on. In the yml file, change the "name" section to either webservers or elk_
-- _http://10.1.0.4:5601_
+- __The playbook files are filebeat-playbook.yml, metricbeat-playbook.yml, and elk-install.yml_
+- __Update your config file and to change what machine the playbook runs on. In the yml file, change the "name" section to either webservers or elk_
+- __http://10.1.0.4:5601_
